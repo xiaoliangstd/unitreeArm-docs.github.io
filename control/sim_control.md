@@ -42,3 +42,17 @@ padding: 1px;">仿真环境中的机械臂</div>
 </center>
 <br>
 如上图所示，当弹出gazebo仿真器并正常显示机械臂，且该终端没有红色的错误提示信息即可认为此步骤执行成功。
+
+
+**4.启动机械臂控制器** 
+&emsp;打开一个终端，输入命令`rosrun z1_controller z1_ctrl`来启动机械臂控制器
+<center>
+<img src="../img/sim_control/sim_control_z1_ctrl.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">启动机械臂控制器</div>
+</center>
+<br>
+如上图所示，当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, wait time out`语句,这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
