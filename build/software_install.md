@@ -19,7 +19,7 @@ sort: 2
 ### Ros(Melodic)安装
 &emsp;&emsp;Ros(Melodic)的安装只需要按照其官网上的安装步骤一步步安装即可：https://wiki.ros.org/melodic/Installation/Ubuntu
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/melodic_install.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/melodic_install.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
