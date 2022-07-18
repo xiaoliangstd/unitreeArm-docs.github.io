@@ -155,7 +155,7 @@ padding: 1px;">标签运行演示</div>
 
 + **MOVEJ**
 <center>
-<img src="../img/gazebo_moveJ.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/gazebo_moveJ .gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
