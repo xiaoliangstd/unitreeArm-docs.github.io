@@ -15,7 +15,7 @@ sort: 1
 &emsp;&emsp;在本小节中，会尽可能详细地带领大家一步一步尝试在仿真中对机械臂的控制。
 
 **1.修改z1_ws的CMakeLists.txt文件** 
-&emsp;到z1_ws/src/z1_controller路径下找到CMakeLists.txt文件，打开它，找到下图所式内容并按下图所示修改，然后保存该文件(Ctrl+s)
+&emsp;到z1_ws/src/z1_controller路径下找到CMakeLists.txt文件，打开它，找到下图所式内容并按下图所示修改以支持仿真控制，然后保存该文件(Ctrl+s)
 <center>
 <img src="../img/virtual/virtual_CmakeLists.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
@@ -56,3 +56,16 @@ padding: 1px;">启动机械臂控制器</div>
 </center>
 <br>
 如上图所示，当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, wait time out`语句,这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
+
+**5.启动机械臂SDK** 
+&emsp;打开一个终端，将工作路径切换至z1_sdk/unitree_arm_sdk/build,并使用`ls`命令查看有什么可执行文件。
+<center>
+<img src="../img/sim_control/sim_contrl_runSDK.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">运行机械臂SDK中的bigDemo例子</div>
+</center>
+<br>
+如上图所式，该文件夹内有一个名为`bigDemo`的例子，我们在终端上打入`sudo ./bigDemo`，然后按下键盘上的`Enter`键并输入用户密码即可启动它，随后机械臂就会按照`bigDemo`中编写的控制逻辑运动。
