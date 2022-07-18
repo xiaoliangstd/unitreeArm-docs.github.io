@@ -31,4 +31,14 @@ padding: 1px;">z1_ws的CMakeLists.txt文件设置(仿真控制)</div>
 
 
 **3.启动仿真机械臂** 
-&emsp;打开一个终端，输入命令
+&emsp;打开一个终端，输入命令`roslaunch z1_gazebo z1.launch`来启动仿真环境中的机械臂
+<center>
+<img src="../img/sim_control/sim_control_gazebo.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">仿真环境中的机械臂</div>
+</center>
+<br>
+如上图所示，当弹出gazebo仿真器并正常显示机械臂，且该终端没有红色的错误提示信息即可认为此步骤执行成功。
