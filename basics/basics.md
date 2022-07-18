@@ -31,15 +31,15 @@ padding: 1px;">z1_sdk文件夹内容</div>
 
 &emsp;&emsp;其中**unitree_arm_sdk**子文件夹里便存放着机械臂sdk `unitree_arm_sdk`，其余子文件夹则为`unitree_arm_sdk`的依赖。打开**unitree_arm_sdk**文件夹发现其内也有许多子文件\子文件夹:
 <!-- ![unitree_arm_sdk_struct](../../img/unitree_arm_sdk_struct.png)\ -->
-<!-- <center>
-<img src="/home/liang/unitreeArm-docs/source/img/unitree_arm_sdk_struct.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<center>
+<img src="../img/unitree_arm_sdk_struct.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
 color: #999;
 padding: 1px;">unitree_arm_sdk文件夹内容</div>
 </center>
-<br> -->
+<br> 
 
 其作用分别为：
 + build:&emsp;为`unitree_arm_sdk`编译时储存可执行文件和中间文件的文件夹。
@@ -58,7 +58,7 @@ padding: 1px;">unitree_arm_sdk文件夹内容</div>
 &emsp;&emsp;下面介绍一下`unitree_arm_sdk`与`z1_ctrl`与`机械臂`间的关系,这里`机械臂`指的是仿真中的机械臂或真实世界中的机械臂。这将有助于我们理解下文中介绍的启动对机械臂控制时输入的命令。
 <!-- ![关系图](../../img/relationAbout_z1_ws_sdk.png) -->
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/relationAbout_z1_ws_sdk.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/relationAbout_z1_ws_sdk.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -75,7 +75,7 @@ padding: 1px;">关系图</div>
 
 ## 关节及坐标系定义
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/z1_arm_cooridinate.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/z1_arm_cooridinate.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -91,7 +91,7 @@ padding: 1px;">z1机械臂关节序号及关节转动正方向定义</div>
 &emsp;&emsp;z1机械臂提供了多种上层控制模式，如关节空间控制、笛卡尔空间控制、MOVEJ、MOVEL等，理解这些控制模式使得用户在使用时能更好地知道如何给`z1_ws`发命令从而控制机械臂运动。
 + **关节空间控制**
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/gazebo_ctrl4.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/gazebo_ctrl4.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -104,7 +104,7 @@ padding: 1px;">关节空间控制演示</div>
 
 + **笛卡尔空间控制**
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/gazebo_catesian1.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/gazebo_catesian1.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -114,7 +114,7 @@ padding: 1px;">笛卡尔空间控制演示</div>
 <br>
 
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/catesian_example.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/catesian_example.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -128,7 +128,7 @@ padding: 1px;">笛卡尔空间控制</div>
 
 + **标签记录**
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/test.png" style="zoom:90%" alt=" 图片不见了。。。 "/>
+<img src="../img/test.png" style="zoom:90%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -141,7 +141,7 @@ padding: 1px;">标签记录演示</div>
 
 + **标签运行**
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/gazebo_tostate.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/gazebo_tostate.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -155,7 +155,7 @@ padding: 1px;">标签运行演示</div>
 
 + **MOVEJ**
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/gazebo_moveJ .gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/gazebo_moveJ .gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
