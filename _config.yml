@@ -1,0 +1,15 @@
+#theme: jekyll-theme-slate
+title: 风清舞的旅行
+lang: en
+description: 个人所学总结
+
+remote_theme: rundocs/jekyll-rtd-theme
+
+readme_index:
+  with_frontmatter: true
+
+exclude:
+  - Makefile
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
