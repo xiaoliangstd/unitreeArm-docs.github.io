@@ -169,7 +169,7 @@ padding: 1px;">MOVEJ演示</div>
 
 + **MOVEL**
 <center>
-<img src="/home/liang/unitreeArm-docs/source/img/moveLandmoveJ1.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/moveLandmoveJ1.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
