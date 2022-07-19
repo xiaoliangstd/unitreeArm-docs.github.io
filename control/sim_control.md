@@ -29,7 +29,7 @@ padding: 1px;">z1_ws的CMakeLists.txt文件设置(仿真控制)</div>
 **2.重新编译z1_ws** 
 &emsp;打开一个终端，并将工作路径切换至z1_ws/路径，然后按照    节方法重新编译。若没有编译成功，则需要解决问题，直至编译成功。
 ```note
-查看[软件编译](https://xiaoliangstd.github.io/unitreeArm-docs.github.io/build/software_build.html)小节方法进行重新编译。
+可以参考[软件编译](https://xiaoliangstd.github.io/unitreeArm-docs.github.io/build/software_build.html)小节方法进行重新编译。
 ```
 
 **3.启动仿真机械臂** 
