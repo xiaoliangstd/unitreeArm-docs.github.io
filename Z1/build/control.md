@@ -9,7 +9,7 @@ sort: 3
 ```
 cd .../z1_ws      #打开该文件夹
 catkin_make       #初始化ROS工作空间
-echo “source .../z1_ws/devel/setup.bash”>>~/.bashrc  #将ros路径添加到环境变量，其中路径为绝对路径
+echo “source ~/z1_ws/devel/setup.bash”>>~/.bashrc  #将ros路径添加到环境变量
 source ~/.bashrc    #更新环境变量
 ```
 在终端执行`roslaunch z1_gazebo z1.launch`，如果成功配置此时可以显示出gazebo的仿真界面。
