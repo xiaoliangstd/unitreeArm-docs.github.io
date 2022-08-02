@@ -1,4 +1,4 @@
-# UnitreeArm
+# Z1
 
 欢迎您使用Unitree机械臂，并感谢您的购买。
 

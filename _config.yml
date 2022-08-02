@@ -1,7 +1,7 @@
 #theme: jekyll-theme-slate
-title: unitreeArm-docs
+title: unitree-docs
 lang: en
-description: 宇树机械臂文档
+description: 宇树科技产品文档
 
 remote_theme: rundocs/jekyll-rtd-theme
 
