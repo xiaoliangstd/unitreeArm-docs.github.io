@@ -12,18 +12,40 @@ sort: 2
 + LCM (1.4.0版本) 
 + RBDL (2.6.0版本) 
 
-### RBDL安装
+为了方便用户使用，我们也在z1_sdk/thirdparty/目录下提供了Eigen及RDBL两个库包，解压后可以直接根据以下步骤进行安装。
 
-### Eigen安装
+#### RBDL安装
 
-### Ros(Melodic)安装
-&emsp;&emsp;Ros(Melodic)的安装只需要按照其官网上的安装步骤一步步安装即可：https://wiki.ros.org/melodic/Installation/Ubuntu
-<center>
-<img src="../img/melodic_install.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
-<br>
-<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
-display: inline-block;
-color: #999;
-padding: 1px;">Ros(Melodic)官网安装页面</div>
-</center>
-<br>
+编译安装
+```
+cd rbdl-2.6.0
+mkdir build
+cd build
+cmake -D CMAKE_BUILD_TYPE=release ..
+sudo make install
+```
+设置文件路径
+```
+sudo su    (input password)
+sudo echo /usr/local/lib >> /etc/ld.so.conf
+sudo ldconfig
+```
+#### Eigen安装
+如果已安装旧版本Eigen，可以先卸载，如果没有可以直接进行下一步安装。
+
+卸载旧版本
+```
+cd /usr/include
+sudo rm -rf ./eigen3
+```
+编译安装
+```
+cd eigen-3.3.9
+mkdir build
+cd build
+cmake ..
+sudo make install
+
+sudo ln -s /usr/local/include/eigen3  /usr/include/eigen3
+sudo ln -s /usr/local/include/eigen3/Eigen  /usr/local/include/Eigen
+```
