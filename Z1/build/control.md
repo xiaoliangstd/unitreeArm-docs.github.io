@@ -6,8 +6,8 @@ sort: 3
 ### ROS仿真
 
 1. 首先将z1_ws设置为ROS的工作空间，我们已经将ROS所需的相关文件放置在z1_ws/src/z1_ros文件夹下（打开第1个终端）
-```
-cd .../z1_ws      #打开该文件夹
+```shell
+cd ~/z1_ws      #打开该文件夹
 catkin_make       #初始化ROS工作空间
 echo “source ~/z1_ws/devel/setup.bash”>>~/.bashrc  #将ros路径添加到环境变量
 source ~/.bashrc    #更新环境变量
@@ -26,20 +26,20 @@ set(CTRL_PANEL SDK)                  #control by SDK
 # set(CTRL_PANEL B1_JOYSTICK)        #control by joystick of B1
 ```
 3. 编译z1_controller，在该文件夹下创建build文件夹（打开第2个终端）
-```
+```shell
 mkdir build
 cd build
 cmake ..
 make
 ```
 执行build文件夹内的可执行文件
-```
+```shell
 ./z1_ctrl
 ```
 当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
 
 4. 打开z1_sdk文件夹，在该文件夹下创建build文件夹（打开第3个终端）
-```
+```shell
 mkdir build
 cd build
 cmake ..
@@ -50,7 +50,7 @@ make
 其中共生成example_keyboard_send, example_lowcmd_send, bigdemo三个可执行文件。
 
 本次我们执行example_keyboard_send
-```
+```shell
 ./example_keyboard_send
 ```
 
@@ -75,3 +75,5 @@ set(CTRL_PANEL SDK)                  #control by SDK
 ```
 2. 执行`./z1_ctrl`
 3. 执行`./example_keyboard_send`
+
+此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](armtest.unitree.com/Z1/basics/)小节介绍

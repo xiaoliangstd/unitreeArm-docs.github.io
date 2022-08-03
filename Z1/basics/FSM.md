@@ -21,14 +21,63 @@ sort: 4
 |TRAJECTORY|-|~ 1 2|
 |CALIBRATION|=|automatically switched to 2|
 
+在键盘控制模式下，按下某个键位就可以进入该状态机，在Switchable列表下为从某一状态机下可以进入的其他状态机。
+
+为了避免奇异问题，我们建议用户每次使用时先将机械臂通过TOSTAET状态机运行至forward位姿下。
+
 ## BACKTOSTART
 
 所有电机返回初始位置
+
 ## PASSIVE
+
 所有电机进入阻尼状态（上电后的默认状态）
+
 ## JOINTCTRL
 
+
+在关节空间速度控制中，可以通过键盘直接地给定机械臂6个关节运动的速度，从而控制机械臂的运动。
+需要再次说明的是，所有关节坐标系均是右手系，在使用前需注意个关节的正反转运动趋势，以确保安全操作。
+
+<center>
+<table border="1">
+    <tr>
+        <td>Joint ID</td>
+        <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+        <td>Gripper</td>
+    </tr>
+    <tr>
+        <td>Keyboard</td>
+        <td>Q/A</td><td>W/S</td><td>D/E</td><td>R/F</td><td>T/G</td><td>Y/H</td>
+        <td>up/down</td>
+    </tr>
+    <tr>
+        <td><p>Joint Action</p>(right hand)</td>
+        <td><p>positive/</p>negative</td><td><p>positive/</p>negative</td>
+        <td><p>positive/</p>negative</td><td><p>positive/</p>negative</td>
+        <td><p>positive/</p>negative</td><td><p>positive/</p>negative</td>
+        <td><p>positive/</p>negative</td>
+    </tr>
+</table>
+</center>
+
 ## CARTESIAN
+
+在笛卡尔空间控制中，可以直接地通过键盘或手柄给定机械臂末端的期望未知与姿态的运动速度，进而控制机械臂的运动。
+
+<center>
+<table border="1">
+    <tr>
+        <td>Keyboard</td>
+        <td>Q/A</td><td>W/S</td><td>E/D</td><td>R/F</td><td>T/G</td><td>Y/H</td>
+    </tr>
+    <tr>
+        <td>Key Function</td>
+        <td><p>forward/</p>backward</td><td><p>right/</p>left</td><td><p>up/</p>down</td>
+        <td>roll</td><td>pitch</td><td>yaw</td>
+    </tr>
+</table>
+</center>
 
 ## MoveJ
 
@@ -38,12 +87,34 @@ sort: 4
 
 ## TEACH
 
+进入示教状态机后，机械臂可以拖拽机械臂运动一定的轨迹，机械臂将持续记录轨迹直至用户按2进入关节空间控制。
+
+退出时输入字符串将该轨迹命名，该轨迹将单纯保存在一个z1_controller/config目录下.csv文件中。
+
 ## TEACHREPEAT
+
+输入已保存的轨迹标签名，机械臂将重复该示教轨迹运动。
 
 ## SAVESTATE
 
+允许将机械臂某一时刻的各关节角度记录为一个标签，我们称此功能为 **标签记录**。
+
+机械臂会自动保存当前的位姿状态，根据提示输入自定的标签名。
+记录的标签保存于savedArmStates.csv文件中。
+完成后机械臂及将自动转至关节空间控制状态。
+
 ## TOSTATE
+
+输入已存储的标签名，机械臂将自动运行至相应位姿。
+
+当运动完成后，机械臂将自动转至关节空间控制状态。
 
 ## TRAJECTORY
 
+机械臂将重复执行写入的轨迹。
+
+//TODO: 用户无法使用
+
 ## CALIBRATION
+
+设置当前位置为初始位置，完成设置后机械臂将自动转至关节空间控制状态。
