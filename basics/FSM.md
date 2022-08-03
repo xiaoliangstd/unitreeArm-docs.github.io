@@ -18,7 +18,6 @@ sort: 4
 |TEACHREPEAT|8|automatically switched to 2|
 |SAVESTATE|9|automatically switched to 2|
 |TOSTATE|0|automatically switched to 2|
-|TRAJECTORY|-|~ 1 2|
 |CALIBRATION|=|automatically switched to 2|
 
 在键盘控制模式下，按下某个键位就可以进入该状态机，在Switchable列表下为从某一状态机下可以进入的其他状态机。
@@ -35,8 +34,8 @@ sort: 4
 
 ## JOINTCTRL
 
-
 在关节空间速度控制中，可以通过键盘直接地给定机械臂6个关节运动的速度，从而控制机械臂的运动。
+
 需要再次说明的是，所有关节坐标系均是右手系，在使用前需注意个关节的正反转运动趋势，以确保安全操作。
 
 <table border="1">
@@ -75,11 +74,11 @@ sort: 4
     </tr>
 </table>
 
-## MoveJ
+## MoveJ、MOVEL、MOVEC
 
-## MoveL
+根据提示输入，可以是具体点的坐标，也可以是标签名。
 
-## MoveC
+点的坐标可以先通过关节控制移动到目标位置，然后通过savestate状态机保存至csv文件或调用getJointState可执行文件获取。
 
 ## TEACH
 
@@ -104,12 +103,6 @@ sort: 4
 输入已存储的标签名，机械臂将自动运行至相应位姿。
 
 当运动完成后，机械臂将自动转至关节空间控制状态。
-
-## TRAJECTORY
-
-机械臂将重复执行写入的轨迹。
-
-//TODO: 用户无法使用
 
 ## CALIBRATION
 

@@ -76,4 +76,4 @@ set(CTRL_PANEL SDK)                  #control by SDK
 2. 执行`./z1_ctrl`
 3. 执行`./example_keyboard_send`
 
-此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](armtest.unitree.com/Z1/basics/)小节介绍
+此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](armtest.unitree.com/basics/)小节介绍
