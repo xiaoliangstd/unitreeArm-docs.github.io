@@ -39,7 +39,6 @@ sort: 4
 在关节空间速度控制中，可以通过键盘直接地给定机械臂6个关节运动的速度，从而控制机械臂的运动。
 需要再次说明的是，所有关节坐标系均是右手系，在使用前需注意个关节的正反转运动趋势，以确保安全操作。
 
-<center>
 <table border="1">
     <tr>
         <td>Joint ID</td>
@@ -59,13 +58,11 @@ sort: 4
         <td><p>positive/</p>negative</td>
     </tr>
 </table>
-</center>
 
 ## CARTESIAN
 
 在笛卡尔空间控制中，可以直接地通过键盘或手柄给定机械臂末端的期望未知与姿态的运动速度，进而控制机械臂的运动。
 
-<center>
 <table border="1">
     <tr>
         <td>Keyboard</td>
@@ -77,7 +74,6 @@ sort: 4
         <td>roll</td><td>pitch</td><td>yaw</td>
     </tr>
 </table>
-</center>
 
 ## MoveJ
 
