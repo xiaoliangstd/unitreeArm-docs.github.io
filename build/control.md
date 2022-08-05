@@ -38,6 +38,8 @@ make
 ```
 当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
 
+**各种信息都会在这个窗口打印，用户使用使请多观察此窗口内容。**
+
 4. 打开z1_sdk文件夹，在该文件夹下创建build文件夹（打开第3个终端）
 ```shell
 mkdir build
@@ -53,8 +55,20 @@ make
 ```shell
 ./example_keyboard_send
 ```
++ 键盘操作 *具体的键位在状态机小节会有介绍*
 
-在键盘上按0键，此时机械臂会进入标签运行状态机，终端输入forward后enter，机械臂会向前运行，再按~键会回到原点。具体的键位在状态机小节会有介绍。
+在键盘上按0键，此时机械臂会进入标签运行状态机，终端输入forward后enter，机械臂会向前运行，再按 ~ 键会回到原点。回到原点后会自动进入关节控制模式，此时可根据以下键位控制机械臂转动。
+
+<center>
+<img src="../img/joint_keyboard.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">关节空间速度控制按键图示</div>
+</center>
+<br>
+
 
 此时我们已经完成仿真操作，整个流程为&emsp;**运行ROS-->运行z1_ctrl-->运行SDK实例**
 
