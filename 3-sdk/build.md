@@ -100,9 +100,11 @@ source ~/.bashrc
 
 ## 网络配置
 
-机械臂的默认IP为192.168.123.110，如果IP冲突，你需要在使用SDK之前更改PC的IP。
+### PC防冲突IP更改
 
-在终端中运行ifconfig，您将找到您的端口名称。例如，enpxxx.
+机械臂的默认IP为192.168.123.110，如果PC的IP与该冲突（可以通过ifconfig指令查看），用户需要在使用SDK之前更改PC的IP。
+
+以更改为192.168.123.162示例，在终端中运行ifconfig，您将找到您的端口名称。例如，enpxxx.
 ```shell
 sudo ifconfig enpxxx down        # enpxxx is your PC port 
 sudo ifconfig enpxxx 192.168.123.162/24 
@@ -121,3 +123,9 @@ netmask 255.255.255.0
 ```
 此时可以通过ping 192.168.123.110指令检测与机械臂连接是否正常。
 
+### 机械臂控制程序IP更改
+
+如果用户更改了机械臂控制板IP，比如将原本的192.168.123.110改为192.168.123.111，
+此时需要使控制程序z1_ctrl的IP与其保持一致。
+
+打开z1_controller/config.xml文件，更改其中IP即可。其他地方无需变动。
