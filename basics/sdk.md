@@ -36,3 +36,7 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 ### 3. bigDemo
 
 bigDemo通过对unitreeArm类继承，编写了一个对类中的成员函数进行调用示例。
+
+### 4. getJointGripperState
+
+该执行文件实时打印机械臂末端位姿，方便用户记录点位

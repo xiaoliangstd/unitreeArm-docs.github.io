@@ -46,6 +46,7 @@ sudo ln -s /usr/local/include/eigen3  /usr/include/eigen3
 sudo ln -s /usr/local/include/eigen3/Eigen  /usr/local/include/Eigen
 ```
 + LCM (1.4.0版本) 
+
 ```shell
 cd lcm-1.4.0
 mkdir build && cd build
@@ -53,8 +54,10 @@ cmake ..
 make
 sudo make install
 ```
+
 + RBDL (2.6.0版本) 
-```bash
+
+```shell
 cd rbdl-2.6.0
 mkdir build
 cd build
@@ -94,7 +97,7 @@ source ~/.bashrc
 
 ### 网络配置
 
-机械臂的默认IP为192.168.123.110，你需要在使用SDK之前更改PC的IP，以便你的PC可以ping到机器人。
+机械臂的默认IP为192.168.123.110，如果IP冲突，你需要在使用SDK之前更改PC的IP。
 
 在终端中运行ifconfig，您将找到您的端口名称。例如，enpxxx.
 ```shell
@@ -114,3 +117,11 @@ address 192.168.123.162
 netmask 255.255.255.0
 ```
 此时可以通过ping 192.168.123.110指令检测与机械臂连接是否正常。
+
+如果需要同时使用多个机械臂，需要修改机械臂的默认IP，包括z1_ctrl控制程序中的IP设置以及机械臂控制板中的实际IP。
+
+1. z1_ctrl中更改IP
+
+打开 ~/z1_sdk/z1_controller/config.xml文件夹，修改其中的IP，建议根据机械臂的使用数目更改为111,112，...以此类推
+
+2. 更改控制板IP
