@@ -1,6 +1,7 @@
 ---
 sort: 1
 ---
+
 # 机械臂SDK介绍
 
 ## 文件结构
@@ -14,7 +15,7 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 在z1_sdk文件夹中包含许多子文件夹，其作用分别为：
 
 其作用分别为：
-+ build:&emsp;为`unitree_arm_sdk`编译时储存可执行文件和中间文件的文件夹。
++ build:&emsp;为`unitree_arm_sdk`编译时储存可执行文件和中间文件的文件夹。（压缩包内不包含，需用户创建）
 + CMakeLists.txt:&emsp;为指导`unitree_arm_sdk`编译的文件，如果用户自己编写可执行文件需在其中添加路径。
 + examples:&emsp;存放着控制机械臂的例子的源码文件。
 + include:&emsp;存放着`unitree_arm_sdk`源码对应的头文件。
