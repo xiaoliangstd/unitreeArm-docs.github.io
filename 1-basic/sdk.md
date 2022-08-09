@@ -14,7 +14,6 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 
 在z1_sdk文件夹中包含许多子文件夹，其作用分别为：
 
-其作用分别为：
 + build:&emsp;为`unitree_arm_sdk`编译时储存可执行文件和中间文件的文件夹。（压缩包内不包含，需用户创建）
 + CMakeLists.txt:&emsp;为指导`unitree_arm_sdk`编译的文件，如果用户自己编写可执行文件需在其中添加路径。
 + examples:&emsp;存放着控制机械臂的例子的源码文件。
@@ -28,7 +27,7 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 
 ### 1. example_keyboard_send
 
-用户可以通过键盘发送指令用以控制机械臂，具体键位与指令的对应关系在[有限状态机](armtest.unitree.com/basics/FSM)小节具体介绍。
+用户可以通过键盘发送指令用以控制机械臂，具体键位与指令的对应关系在[有限状态机](1-basics/FSM.md)小节具体介绍。
 
 ### 2. example_lowcmd_send
 
