@@ -8,12 +8,12 @@ sort: 2
 
 **①** 首先将z1_ws设置为ROS的工作空间，我们已经将ROS所需的相关文件放置在z1_ws/src/z1_ros文件夹下（打开第1个终端）
 
-如果用户对如何设置路径不太熟悉，请将z1_ws文化夹移动到 /home/用户名/ 目录下
+如果用户对如何设置路径不太熟悉，请将z1_ws文件夹移动到 /home/用户名/ 目录下
 ```shell
-cd ~/z1_ws      #打开该文件夹
-catkin_make       #初始化ROS工作空间
-echo “source ~/z1_ws/devel/setup.bash”>>~/.bashrc  #将ros路径添加到环境变量
-source ~/.bashrc    #更新环境变量
+cd ~/z1_ws                                          #打开该文件夹
+catkin_make                                         #初始化ROS工作空间
+echo “source ~/z1_ws/devel/setup.bash”>>~/.bashrc   #将ros路径添加到环境变量
+source ~/.bashrc                                    #更新环境变量
 ```
 在终端执行`roslaunch z1_gazebo z1.launch`，如果成功配置此时可以显示出gazebo的仿真界面。
 
