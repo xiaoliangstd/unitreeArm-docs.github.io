@@ -27,7 +27,7 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 
 ### 1. example_keyboard_send
 
-用户可以通过键盘发送指令用以控制机械臂，具体键位与指令的对应关系在[有限状态机](1-basics/FSM.md)小节具体介绍。
+用户可以通过键盘发送指令用以控制机械臂，具体键位与指令的对应关系在[有限状态机](FSM.md)小节具体介绍。
 
 ### 2. example_lowcmd_send
 
