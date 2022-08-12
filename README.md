@@ -8,7 +8,14 @@
 
 PS：如果您第一次使用本产品，可以先阅读第三小节[SDK使用](3-sdk/)
 
-SDK下载链接:<a href="downloads/z1_sdk.2022.8.11.zip" download>z1_sdk.2022.8.11</a>
+SDK下载链接:
+
+含Unitree手爪：<a href="downloads/z1_sdk.2022.8.11.zip" download>z1_sdk.2022.8.11</a>
+
+无Unitree手爪：<a href="downloads/z1_sdk.2022.8.12.zip" download>z1_sdk.2022.8.12</a>
+
+ps：用户需根据自身使用情况下载相应的SDK。
+
 ## 概要
 
 宇树机械臂可以实现关节空间控制、笛卡尔空间控制等多种上层控制模式，还可以实现对底层关节电机的底层控制，用户可以基于此开发自己的控制算法。要实现上述控制则依赖于机械臂SDK的使用。目前通过机械臂SDK对机械臂的控制方式有两种：
