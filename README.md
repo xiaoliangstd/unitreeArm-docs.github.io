@@ -8,13 +8,13 @@
 
 PS：如果您第一次使用本产品，可以先阅读第三小节[SDK使用](3-sdk/)
 
-**SDK下载链接**:
+<!-- **SDK下载链接**:
 
 含Unitree手爪：<a href="downloads/z1_sdk.2022.8.11.zip" download>z1_sdk.2022.8.11</a>
 
 无Unitree手爪：<a href="downloads/z1_sdk.2022.8.12.zip" download>z1_sdk.2022.8.12</a>
 
-PS：用户需根据自身使用情况下载相应的SDK。
+PS：用户需根据自身使用情况下载相应的SDK。 -->
 
 ## 概要
 
