@@ -16,7 +16,7 @@ sort: 1
 
 + build-essential
 ```shell
-sudo install build-essential
+sudo apt install build-essential
 ```
 + Boost (1.5.4版本 或 更高)
 ```shell
