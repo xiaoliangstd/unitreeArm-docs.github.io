@@ -74,7 +74,7 @@ sort: 3
     </tr>
 </table>
 
-## MoveJ、MOVEL、MOVEC
+## MOVEJ、MOVEL、MOVEC
 
 根据提示输入，可以是具体点的坐标(roll pitch yaw x y z)，也可以是标签名。
 
@@ -85,7 +85,7 @@ sort: 3
 
     按0， 输入forward后enter
 
-2. MoveJ
+2. MOVEJ
 
     按4， 输入0.5 0.1 0.1 0.5 -0.2 0.5
 
