@@ -26,7 +26,7 @@ padding: 1px;">关节空间控制演示</div>
 ## 笛卡尔空间控制
 
 <center>
-<img src="../img/gazebo_catesian1.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/gazebo_cartesian1.gif" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -39,7 +39,7 @@ padding: 1px;">笛卡尔空间控制演示</div>
 用户直接地给将期望的机械臂的末端姿态发给机械臂控制器`z1_ctrl`，`z1_ctrl`经过运动学、动力学解算后得到机械臂各关节应该到达的角度、角速度，然后将这些命令发送至机械臂，从而控制机械臂的运动。
 
 <center>
-<img src="../img/catesian_example.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/cartesian_example.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
