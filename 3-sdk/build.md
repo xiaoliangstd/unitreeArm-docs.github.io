@@ -15,29 +15,55 @@ sort: 1
 ## 依赖库安装
 
 + build-essential
+
 ```shell
 sudo apt install build-essential
 ```
+
 + Boost (1.5.4版本 或 更高)
+
 ```shell
 dpkg -S /usr/include/boost/version.hpp      # check boost version
 sudo apt install libboost-dev               # install boost
 ```
-+ CMake (2.8.3版本 或 更高) 
+
++ CMake (2.8.3版本 或 更高)
+  
 ```shell
 cmake --version             # check cmake version
 sudo apt install cmake      # install cmake
 ```
-+ Eigen (3.3.9版本) 
+
++ GCC(GLIBCXX 3.4.22版本或更高)
+
+可以通过一下命令行查看当前GLIBCXX版本信息
+
+```shell
+strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
+```
+
+upgrade
+
+```shell
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install gcc-4.9
+sudo apt-get upgrade libstdc++6
+```
+
++ Eigen (3.3.9版本)
 
 如果已安装旧版本Eigen，可以先卸载，如果没有可以直接进行下一步安装。
 
 卸载旧版本
+
 ```shell
 cd /usr/include
 sudo rm -rf ./eigen3
 ```
+
 编译安装
+
 ```shell
 cd eigen-3.3.9
 mkdir build
@@ -48,7 +74,8 @@ sudo make install
 sudo ln -s /usr/local/include/eigen3  /usr/include/eigen3
 sudo ln -s /usr/local/include/eigen3/Eigen  /usr/local/include/Eigen
 ```
-+ LCM (1.4.0版本) 
+
++ LCM (1.4.0版本)
 
 ```shell
 cd lcm-1.4.0
@@ -58,7 +85,7 @@ make
 sudo make install
 ```
 
-+ RBDL (2.6.0版本) 
++ RBDL (2.6.0版本)
 
 ```shell
 cd rbdl-2.6.0
