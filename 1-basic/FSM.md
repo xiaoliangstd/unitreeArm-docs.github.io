@@ -18,7 +18,7 @@ sort: 3
 |TEACHREPEAT|8|automatically switched to 2|
 |SAVESTATE|9|automatically switched to 2|
 |TOSTATE|0|automatically switched to 2|
-|CALIBRATION|=|automatically switched to 2|
+|CALIBRATION|=|automatically switched to 1|
 
 在键盘控制模式下，按下某个键位就可以进入该状态机，在Switchable列表下为从某一状态机下可以进入的其他状态机。
 
@@ -132,6 +132,6 @@ sort: 3
 
 ## CALIBRATION
 
-键盘按=，设置当前位置为初始位置，完成设置后机械臂将自动转至关节空间控制状态。
+键盘按=，设置当前位置为初始位置，完成设置后机械臂将自动转至阻尼状态。
 
 新的机械臂需在运行程序的第一步执行该操作。
