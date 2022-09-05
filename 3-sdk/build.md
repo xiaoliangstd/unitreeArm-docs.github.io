@@ -137,7 +137,7 @@ source ~/.bashrc
 
 ```shell
 sudo apt-get install python3-pip 
-sudo apt install rosdepc
+sudo pip3 install rosdepc
 sudo rosdepc init
 rosdepc update
 ```
