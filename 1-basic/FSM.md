@@ -81,6 +81,7 @@ sort: 3
 点的坐标可以先通过关节控制移动到目标位置，然后通过savestate状态机保存至csv文件或调用getJointState可执行文件获取。
 
 示例：
+
 1. 先将机械臂运行至forward状态
 
     按0， 输入forward后enter

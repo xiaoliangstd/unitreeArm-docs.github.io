@@ -31,7 +31,7 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 
 ### 2. example_lowcmd_send
 
-该文件展示了如何对电机进行直接发送pd参数。仿真参数和实际参数有所不同。
+该文件展示了如何对电机进行直接发送pd参数。仿真参数和实际参数有所不同，需在执行可执行文件时添加后置参数"s"或"r"。用户可以通过编写自己的机械臂程序对电机直接进行控制，实现自主开发。
 
 ### 3. bigDemo
 
@@ -39,4 +39,6 @@ bigDemo通过对unitreeArm类继承，编写了一个对类中的成员函数进
 
 ### 4. getJointGripperState
 
-该执行文件实时打印机械臂末端位姿，方便用户记录点位
+该执行文件实时打印机械臂末端位姿，方便用户记录点位。
+
+也可在UnitreeArm类中创建一个线程调用getGripperState函数记录_recvState.cartesian的值。

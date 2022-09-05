@@ -75,28 +75,45 @@ sudo ldconfig
 ## ROS(melodic)安装
 
 添加ROS源
+
 ```shell
 sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 ```
+
 安装melodic桌面版ros-melodic-desktop-full
+
 ```shell
 sudo apt update
 sudo apt install ros-melodic-desktop-full
 ```
+
 安装ros依赖
+
 ```shell
-sudo apt-get install python3-pip 
-sudo pip3 install rosdepc
-sudo rosdepc init
-rosdepc update
+sudo apt install rosdep
+sudo rosdep init
+rosdep update
 ```
+
 添加ros环境变量
+
 ```shell
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+
 安装结束
+
+其中中国用户在使用在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试替换一下命令重新执行。
+安装ros依赖
+
+```shell
+sudo apt-get install python3-pip 
+sudo apt install rosdepc
+sudo rosdepc init
+rosdepc update
+```
 
 ## 网络配置
 
@@ -105,22 +122,28 @@ source ~/.bashrc
 机械臂的默认IP为192.168.123.110，如果PC的IP与该冲突（可以通过ifconfig指令查看），用户需要在使用SDK之前更改PC的IP。
 
 以更改为192.168.123.162示例，在终端中运行ifconfig，您将找到您的端口名称。例如，enpxxx.
+
 ```shell
 sudo ifconfig enpxxx down        # enpxxx is your PC port 
 sudo ifconfig enpxxx 192.168.123.162/24 
 sudo ifconfig enpxxx up 
 ```
+
 以上方式为临时更改IP使用，您也可以将永久更改PC的IP，操作如下
+
 ```shell
 sudo vim /etc/network/interfaces
 ```
+
 添加一下文本至上述打开的interfaces文件中
+
 ```shell
 auto enpxxx
 iface enpxxx inet static
 address 192.168.123.162
 netmask 255.255.255.0
 ```
+
 此时可以通过ping 192.168.123.110指令检测与机械臂连接是否正常。
 
 ### 机械臂控制程序IP更改
@@ -134,6 +157,8 @@ netmask 255.255.255.0
 
 ## 手爪配置
 
-在config.xml有关于gripper的设置参数，如果选择1则末端无手爪，2则末端为机械臂自带手爪。
+在config.xml有关于gripper的设置参数，如果选择1则末端无手爪，2则末端为机械臂自带手爪，选择3则可。可根据用户输入的参数自定义手爪。
+
+该设置参数仅为程序内配置，实际机械臂有无手爪并不影响程序的执行，但当参数不一致z1_controller会发出警告。
 
 同时我们允许用户根据user_gripper定义自己的手爪参数，其中endPosLocal为手爪坐标相对于关节5末端平面坐标系(0.049, 0, 0.1605)的相对坐标；mass为手爪质量，单位kg；com(center of mass)为手爪质心位置；I为惯量矩阵，默认均匀分布，故只设置了矩阵迹上的值。
