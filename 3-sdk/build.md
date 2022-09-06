@@ -95,8 +95,9 @@ cmake -D CMAKE_BUILD_TYPE=release ..
 sudo make install
 
 sudo su    (input password)
-sudo echo /usr/local/lib >> /etc/ld.so.conf # set path
-sudo ldconfig
+echo /usr/local/lib >> /etc/ld.so.conf # set path
+ldconfig
+exit #退出超级管理员模式
 ```
 
 ## ROS(melodic)安装
