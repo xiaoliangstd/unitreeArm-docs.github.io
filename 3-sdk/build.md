@@ -102,6 +102,10 @@ exit #退出超级管理员模式
 
 ## ROS(melodic)安装
 
+参考ROS官方[melodic安装教程](http://wiki.ros.org/melodic/Installation/Ubuntu)
+
+其中中国用户在使用在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试替换以下命令执行。
+
 添加ROS源
 
 ```shell
@@ -119,9 +123,10 @@ sudo apt install ros-melodic-desktop-full
 安装ros依赖
 
 ```shell
-sudo apt install rosdep
-sudo rosdep init
-rosdep update
+sudo apt-get install python3-pip 
+sudo pip3 install rosdepc
+sudo rosdepc init
+rosdepc update
 ```
 
 添加ros环境变量
@@ -132,16 +137,6 @@ source ~/.bashrc
 ```
 
 安装结束
-
-其中中国用户在使用在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试替换一下命令重新执行。
-安装ros依赖
-
-```shell
-sudo apt-get install python3-pip 
-sudo pip3 install rosdepc
-sudo rosdepc init
-rosdepc update
-```
 
 ## 网络配置
 
