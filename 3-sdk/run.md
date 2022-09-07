@@ -13,7 +13,7 @@ sort: 2
 ```shell
 cd ~/z1_ws                                          #打开该文件夹
 catkin_make                                         #初始化ROS工作空间
-echo “source ~/z1_ws/devel/setup.bash”>>~/.bashrc   #将ros路径添加到环境变量
+echo “source ~/z1_ws/devel/setup.bash”>>~/.bashrc   #将ros路径添加到环境变量，可由pwd命令获取当前路径替换该路径
 source ~/.bashrc                                    #更新环境变量
 ```
 

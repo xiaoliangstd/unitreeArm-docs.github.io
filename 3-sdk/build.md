@@ -75,7 +75,7 @@ sudo ln -s /usr/local/include/eigen3  /usr/include/eigen3
 sudo ln -s /usr/local/include/eigen3/Eigen  /usr/local/include/Eigen
 ```
 
-+ LCM (1.4.0版本)
+<!-- + LCM (1.4.0版本)
 
 ```shell
 cd lcm-1.4.0
@@ -83,7 +83,7 @@ mkdir build && cd build
 cmake ..
 make
 sudo make install
-```
+``` -->
 
 + RBDL (2.6.0版本)
 
@@ -95,16 +95,16 @@ cmake -D CMAKE_BUILD_TYPE=release ..
 sudo make install
 
 sudo su    (input password)
-echo /usr/local/lib >> /etc/ld.so.conf # set path
+echo /usr/local/lib >> /etc/ld.so.conf  # set path
 ldconfig
-exit #退出超级管理员模式
+exit                                    # 退出超级管理员模式
 ```
 
 ## ROS(melodic)安装
 
 参考ROS官方[melodic安装教程](http://wiki.ros.org/melodic/Installation/Ubuntu)
 
-其中中国用户在使用在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试替换以下命令执行。
+其中中国用户在使用在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试通过国内小鱼ROS开发的rosdepc命令执行。
 
 添加ROS源
 
@@ -142,7 +142,7 @@ source ~/.bashrc
 
 ### PC防冲突IP更改
 
-机械臂的默认IP为192.168.123.110，如果PC的IP与该冲突（可以通过ifconfig指令查看），用户需要在使用SDK之前更改PC的IP。
+机械臂的默认IP为192.168.123.110，如果PC的IP与该冲突（可以通过ifconfig指令查看），用户需要在使用SDK之前更改PC的IP。但通常不会出现这种情况，所以这一模块内容用户可以选择忽略。
 
 以更改为192.168.123.162示例，在终端中运行ifconfig，您将找到您的端口名称。例如，enpxxx.
 
