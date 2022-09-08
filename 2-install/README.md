@@ -6,7 +6,7 @@ sort: 2
 
 ## 机械臂运动范围
 
-在安装机械臂时，要考虑机械臂的运动范围以免造成不必要的损失。
+在安装机械臂时，要考虑机械臂的运动范围一面造成不必要的损失。
 机械臂的运动范围如下图所示
 
 <center>
@@ -38,8 +38,8 @@ padding: 1px;"></div>
     <tr><td>J1</td><td>-150°</td><td>150°</td></tr>
     <tr><td>J2</td><td>0°</td><td>180°</td></tr>
     <tr><td>J3</td><td>-165°</td><td>0°</td></tr>
-    <tr><td>J4</td><td>-100°</td><td>100°</td></tr>
-    <tr><td>J5</td><td>-89°</td><td>89°</td></tr>
+    <tr><td>J4</td><td>-80°</td><td>80°</td></tr>
+    <tr><td>J5</td><td>-85°</td><td>85°</td></tr>
     <tr><td>J6</td><td>-160°</td><td>160°</td></tr>
 </table>
 </center>
