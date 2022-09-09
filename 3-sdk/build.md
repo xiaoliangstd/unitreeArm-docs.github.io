@@ -36,7 +36,7 @@ sudo apt install cmake      # install cmake
 
 + GCC(GLIBCXX 3.4.22版本或更高)
 
-可以通过一下命令行查看当前GLIBCXX版本信息
+可以通过以下命令行查看当前GLIBCXX版本信息
 
 ```shell
 strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
