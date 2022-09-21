@@ -37,6 +37,45 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 
 bigDemo通过对unitreeArm类继承，编写了一个对类中的成员函数进行调用示例。
 
+其中在Z1ARM类中定义了四个函数，分别演示四种使用上层命令控制机械臂的方式。
+
+```cpp
+    void armCtrlByFSM();
+    void armCtrlByTraj();
+    void armCtrlTrackInJointCtrl();
+    void armCtrlTrackInCartesian();
+```
+
+① void armCtrlByFSM()
+
+以模拟键盘的方式状态机的切换，进而实现各种功能。例如通过MoveJ(posture)函数可以自动切换到MoveJ状态机并运行至指定姿态posture；
+
+注：这种方式下MoveJ、MoveL、MoveC暂未引出速度定义接口。
+
+② void armCtrlByTraj()
+
+这个函数涉及两个状态机，**State_Trajectory** 和 **State_SetTraj**。
+
+通过setTraj()函数自动切换至State_SetTraj（必须在关节空间控制下），并记录当前设定的TrajCmd，必须保证trajOrder连续，
+其中该轨迹的起点是上一个轨迹的终点。退出State_SetTraj是将会记录所有轨迹，此时可以进入State_Trajectory，依次执行记录的轨迹。
+
+如果在这过程中并未通过State_SetTraj设定新的轨迹，那么可以进入State_Trajectory继续执行记录的轨迹。
+
+```text
+注：由于SDK中状态机的切换是通过模拟键盘的方式，所以这两个状态机在键盘中也是有实际的对应键位，分别是“-”和“l”，
+但实际上单纯通过键盘是无法进行任何操作，值得注意的是，如果用户之间在键盘中按下减号“-”键，机械臂会运行一个默认的演示动作。
+同时如果bigdemo在运行至State_Trajectory下，由于命令已经发送，此时如果终止bigdemo程序，z1_ctrl仍会执行完毕当前轨迹。
+```
+
+③ void armCtrlTrackInJointCtrl()
+
+这个函数运行在关节空间状态机下，存在一个track标志位，正常情况下该值为false，通过键盘控制时可以按键位去控制机械臂移动，但在编程时无法进行操作。
+当设置track为true时，机械臂以当前jointCmd下的q和qd命令运行，直至track再次被设置为false。
+
+④ void armCtrlTrackInCartesian()
+
+该函数运行在笛卡尔空间状态机下，和armCtrlTrackInJointCtrl()同理，但跟随的命令从jointCmd的q和qd变为trajCmd.posture[0]。
+
 ### 4. getJointGripperState
 
 该执行文件实时打印机械臂末端位姿，方便用户记录点位。
