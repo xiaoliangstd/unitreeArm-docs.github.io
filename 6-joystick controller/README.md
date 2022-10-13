@@ -27,7 +27,7 @@ sort: 6
 运动模式启动后，**L2+A**锁定机器狗，此时按下**R2**键则进入关节空间控制模式，用手柄可控制单个关节转动，对应键位如下图所示。运动结束后，按下**SELECT**键可使机械臂回到原位。
 
 <center>
-<img src="../img/remote_joint control.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/joystick_joint control.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
@@ -47,7 +47,7 @@ padding: 1px;">关节空间手柄控制</div>
 运动模式启动后，**L2+A**锁定机器狗，此时按下**R1**键则进入笛卡尔空间控制模式，或者当机械臂处于关节空间控制模式下，按下**R1**键位也可进入笛卡尔空间控制模式，对应键位如下图所示。运动结束后，按下**SELECT**键可使机械臂回到原位。
 
 <center>
-<img src="../img/remote_cartesian control.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
+<img src="../img/joystick_cartesian control.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
 <br>
 <div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
 display: inline-block;
