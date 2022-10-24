@@ -4,6 +4,13 @@ sort: 8
 
 # 更新日志
 
++ 2022.10.21
+
+    1. config.xml文件中去除gripper项，根据电机数目检测有无手爪；添加collision项，包含是否打开碰撞检测，限定扭矩大小以及末端负载。其中末端负载会附加在末端关节处，影响计算前馈扭矩，该值一直生效。
+    2. controller与sdk的通信结构体中添加报错反馈（需下位机支持）
+    3. 去除controller对RBDL依赖
+    4. sdk中去除键盘控制（需用controller键盘）；添加lowlevelstate和lowlevelcmd类对udp通信结构体封装；
+
 + 2022.9.21
 
     1. 在示教模式下添加对手爪的支持。

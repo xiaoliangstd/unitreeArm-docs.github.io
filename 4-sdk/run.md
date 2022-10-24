@@ -60,12 +60,18 @@ make
 
 执行build文件夹内的可执行文件
 
-其中共生成example_keyboard_send, example_lowcmd_send, bigdemo，四个可执行文件。
+其中共生成 example_lowcmd_send, bigdemo两个可执行文件。
 
-本次我们执行example_keyboard_send
+本次我们执行./bigDemo
 
 ```shell
-./example_keyboard_send
+./bigDemo
+```
+
+也可直接在controller的build下执行键盘控制，
+
+```shell
+./z1_ctrl k
 ```
 
 + 键盘操作 *具体的键位在状态机小节会有介绍*
@@ -96,6 +102,6 @@ set(COMMUNICATION UDP)               #UDP
 ```
 
 **③** 执行`./z1_ctrl`
-**④** 执行`./example_keyboard_send`
+**④** 执行`./bigDemo`
 
 此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](../1-basic/sdk.md)小节介绍

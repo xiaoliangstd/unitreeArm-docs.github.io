@@ -10,7 +10,7 @@ sort: 1
 该压缩包中有三个子文件夹：z1_controller, z1_sdk与z1_ws，其中z1_ws属于ROS系统的一个工作空间。z1_controller存储着直接控制机械臂的源码，这些被封装成了库，用户是不可见的。
 z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于控制机械臂的一些接口。
 
-在z1_controller文件夹中，用户关注的只需是CMakeLists.txt文件，根据需求更改选择ROS、UDP。
+在z1_controller文件夹中，用户关注的只需是CMakeLists.txt文件（根据需求更改选择ROS、UDP）和config.xml（根据需求更改配置信息）。
 
 在z1_sdk文件夹中包含许多子文件夹，其作用分别为：
 
@@ -19,19 +19,19 @@ z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于�
 + examples:&emsp;存放着控制机械臂的例子的源码文件。
 + include:&emsp;存放着`unitree_arm_sdk`源码对应的头文件。
 用户使用时只需在源文件中包含unitree_arm_sdk/unitree_arm_sdk.h文件即可
-+ unitreeArm:&emsp;存放着unitreeArm类的源码文件，该类中有工程师为了用户能方便地调用机械臂API而封装的方法。该类与demo文件夹下的例子息息相关。用户也可借鉴该类代码编写自己的类。
++ control：&emsp;其中包含CtrlComponents（程序配置参数）以及unitreeArm:该类中有工程师为了用户能方便地调用机械臂API而封装的方法。该类与demo文件夹下的例子息息相关。用户也可借鉴该类代码编写自己的类。
 
 ## examples
 
 我们提供了几个示例方便用户使用SDK。具体请查看unitreeArm类注释
 
-### 1. example_keyboard_send
+### 1. example_lowcmd_send
 
-用户可以通过键盘发送指令用以控制机械臂，具体键位与指令的对应关系在[有限状态机](FSM.md)小节具体介绍。
+该文件展示了如何对电机进行直接发送pd参数。用户可以通过编写自己的机械臂程序对电机直接进行控制，实现自主开发。
 
-### 2. example_lowcmd_send
+CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
 
-该文件展示了如何对电机进行直接发送pd参数。仿真参数和实际参数有所不同，需在执行可执行文件时添加后置参数"s"或"r"。用户可以通过编写自己的机械臂程序对电机直接进行控制，实现自主开发。
+**注意**：发给电机的实际kp=kp*25.6; 实际kd=kd*0.0128；
 
 ### 3. bigDemo
 
@@ -75,9 +75,3 @@ bigDemo通过对unitreeArm类继承，编写了一个对类中的成员函数进
 ④ void armCtrlTrackInCartesian()
 
 该函数运行在笛卡尔空间状态机下，和armCtrlTrackInJointCtrl()同理，但跟随的命令从jointCmd的q和qd变为trajCmd.posture[0]。
-
-### 4. getJointGripperState
-
-该执行文件实时打印机械臂末端位姿，方便用户记录点位。
-
-也可在UnitreeArm类中创建一个线程调用getGripperState函数记录_recvState.cartesian的值。
