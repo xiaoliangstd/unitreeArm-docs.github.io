@@ -83,4 +83,4 @@ padding: 1px;">关系图</div>
 
 2. 启动`z1_ctrl`
 
-3. 启动`unitree_arm_sdk`
+3. 启动`z1_sdk`
