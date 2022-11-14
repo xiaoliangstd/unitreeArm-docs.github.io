@@ -85,20 +85,6 @@ make
 sudo make install
 ``` -->
 
-+ RBDL (2.6.0版本，2022.10.21版本后无需安装)
-
-```shell
-cd rbdl-2.6.0
-mkdir build
-cd build
-cmake -D CMAKE_BUILD_TYPE=release ..
-sudo make install
-
-sudo su    (input password)
-echo /usr/local/lib >> /etc/ld.so.conf  # set path
-ldconfig
-exit                                    # 退出超级管理员模式
-```
 
 ## ROS(melodic)安装
 
@@ -177,13 +163,3 @@ netmask 255.255.255.0
 打开z1_controller/config.xml文件，更改其中IP即可。
 
 该文件下的另一个control参数用于改变机械臂控制方式，分别为键盘、SDK、以及两种狗的手柄控制，用户无需变动，只使用SDK即可。(即set = "2")
-
-## 手爪配置
-
-**注**：2022.10.21版本后无此配置
-
-在config.xml有关于gripper的设置参数，如果选择1则末端无手爪，2则末端为机械臂自带手爪.选择3则可根据用户输入的参数自定义手爪。
-
-该设置参数仅为程序内配置，实际机械臂有无手爪并不影响程序的执行，但当参数不一致z1_controller会发出警告。
-
-同时我们允许用户根据user_gripper定义自己的手爪参数，其中endPosLocal为手爪坐标相对于关节5末端平面坐标系(0.049, 0, 0.1605)的相对坐标；mass为手爪质量，单位kg；com(center of mass)为手爪质心位置；I为惯量矩阵，默认均匀分布，故只设置了矩阵迹上的值。

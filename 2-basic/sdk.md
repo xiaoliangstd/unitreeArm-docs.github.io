@@ -10,20 +10,15 @@ sort: 1
 该压缩包中有三个子文件夹：z1_controller, z1_sdk与z1_ws，其中z1_ws属于ROS系统的一个工作空间。z1_controller存储着直接控制机械臂的源码，这些被封装成了库，用户是不可见的。
 z1_sdk则是关于机械臂sdk `unitree_arm_sdk`的文件夹，包含了用于控制机械臂的一些接口。
 
-在z1_controller文件夹中，用户关注的只需是CMakeLists.txt文件（根据需求更改选择ROS、UDP）和config.xml（根据需求更改配置信息）。
+在z1_controller文件夹中，用户关注的只需是CMakeLists.txt文件（根据需求更改选择ROS、UDP）和config/config.xml（根据需求更改配置信息）。
 
 config.xml文件包含三项配置，只在z1_ctrl启动时读取一次：
 
-1. control
+1. IP & Port
 
-    确认默认控制的方式：1为键盘控制，2为sdk控制，3为unitree手柄控制（需要挂载在四足上）；
-    同时，无论当前默认控制方式为何，也可通过./z1_ctrl k选择键盘控制或./z1_ctrl s选择sdk控制
+    IP为下位机IP，可通过TCP/IP助手发送指令修改，更改完毕后需修改此处为相同IP才可通信成功；Port为不同z1_ctrl绑定的本机端口。
 
-2. IP & Port
-
-    IP为下位机IP，可通过TCP/IP助手发送指令修改；Port为不同z1_ctrl绑定的本机端口。
-
-3. collision
+2. collision
 
     包含碰撞检测相关的设置，通过将open设置为Y或N选择是否打开碰撞检测；limitT为进行检测时计算扭矩与反馈扭矩的差值检测阈值，单位为NM；load为挂载在机械臂末端的负载重量，单位kg，该值与open设置无关，会一直参与末端负载的动力学计算。
 
@@ -46,7 +41,7 @@ config.xml文件包含三项配置，只在z1_ctrl启动时读取一次：
 
 CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
 
-**注意**：发给电机的实际kp = kp * 25.6; 实际kd = kd * 0.0128；
+**注意**：发给电机的实际kp = kp \* 25.6; 实际 kd = kd \* 0.0128；
 
 ### 3. bigDemo
 
