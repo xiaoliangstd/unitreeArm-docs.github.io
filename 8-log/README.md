@@ -7,8 +7,7 @@ sort: 8
 + **2022.11.11**
 
 1. 减小笛卡尔空间下奇异区域内y轴运行速度
-2. 减小Joint5运动范围
-3. 将config.xml文件移至config文件内，并去除其中config设置
+2. 将config.xml文件移至config文件内，并去除其中config设置
 
 + **2022.10.21**
 

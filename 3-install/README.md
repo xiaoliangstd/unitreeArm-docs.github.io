@@ -28,7 +28,7 @@ padding: 1px;"></div>
     <tr><td>J2</td><td>0°</td><td>180°</td></tr>
     <tr><td>J3</td><td>-165°</td><td>0°</td></tr>
     <tr><td>J4</td><td>-80°</td><td>80°</td></tr>
-    <tr><td>J5</td><td>-77°</td><td>77°</td></tr>
+    <tr><td>J5</td><td>-85°</td><td>85°</td></tr>
     <tr><td>J6</td><td>-160°</td><td>160°</td></tr>
 </table>
 </center>
