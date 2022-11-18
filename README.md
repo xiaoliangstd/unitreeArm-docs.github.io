@@ -50,9 +50,8 @@ PS：用户需根据自身使用情况下载相应的SDK。
 
 ## 文件结构
 
-关于机械臂SDK的文件存储在z1_sdk.20xx.x.x.zip文件夹中，其中20xx.x.x为该SDK发布日期。
-
-该压缩包中包含三个子文件：z1_controller、z1_sdk及z1_ws。
+Z1机械臂SDK共包含三个文件，且相互独立。
+下载地址：[![file](https://img.shields.io/badge/Z1-controller-green)](https://github.com/unitreerobotics/z1_controller) [![file](https://img.shields.io/badge/Z1-sdk-green)](https://github.com/unitreerobotics/z1_sdk) [![file](https://img.shields.io/badge/Z1-ros-green)](https://github.com/unitreerobotics/z1_ros)
 
 + z1_controller
 
@@ -62,9 +61,9 @@ PS：用户需根据自身使用情况下载相应的SDK。
 
 该文件夹包含控制程序的接口。
 
-+ z1_ws
++ z1_ros
 
-该文件夹属于ROS的一个工作空间，其中z1_ws/src/z1_ros文件夹下包含了ROS仿真模型的相关文件。
+z1_ros文件夹下包含了ROS仿真模型的相关文件。
 
 <center>
 <img src="img/relation.png" style="zoom:100%" alt=" 图片不见了。。。 "/>
