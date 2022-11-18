@@ -10,7 +10,7 @@ sort: 1
 
 除此之外，机械臂SDK与机械臂控制器还依赖了许多第三方工具，用户在使用前需要将这些第三方工具安装好。
 
-为了方便用户使用，我们也在z1_sdk/thirdparty/目录下提供了Eigen及RBDL两个库包，解压后可以直接根据以下步骤进行安装。
+为了方便用户使用，我们也在z1_sdk/thirdparty/目录下提供了Eigen包，解压后可以直接根据以下步骤进行安装。
 
 ## 依赖库安装
 
@@ -34,7 +34,7 @@ cmake --version             # check cmake version
 sudo apt install cmake      # install cmake
 ```
 
-+ GCC(GLIBCXX 3.4.22版本或更高)
+<!-- + GCC(GLIBCXX 3.4.22版本或更高)
 
 可以通过以下命令行查看当前GLIBCXX版本信息
 
@@ -49,7 +49,7 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 sudo apt-get install gcc-4.9
 sudo apt-get upgrade libstdc++6
-```
+``` -->
 
 + Eigen (3.3.9版本)
 
@@ -84,7 +84,6 @@ cmake ..
 make
 sudo make install
 ``` -->
-
 
 ## ROS(melodic)安装
 
@@ -161,3 +160,4 @@ netmask 255.255.255.0
 此时需要使控制程序z1_ctrl的IP与其保持一致。
 
 打开z1_controller/config.xml文件，更改其中IP即可。
+注：该文件只是为了使程序可以与机械臂成功通信，并不是更改机械臂IP。
