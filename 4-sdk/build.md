@@ -129,7 +129,7 @@ source ~/.bashrc
 
 机械臂的默认IP为192.168.123.110，用户需要在使用SDK之前更改PC的IP，使用192.168.123网段。
 
-以更改为192.168.123.162示例，在终端中运行ifconfig，您将找到您的端口名称。例如，enpxxx.
+以更改为192.168.123.162示例，在终端中运行ifconfig，您将找到您的端口名称（可通过插拔网线，查看增加/减少的端口，来查找对应的端口名称）。例如，enpxxx.
 
 ```shell
 sudo ifconfig enpxxx down        # enpxxx is your PC port 
