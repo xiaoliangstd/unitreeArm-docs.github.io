@@ -134,3 +134,4 @@ $$ \tau = k_p * 25.6 * (q_d - q) + k_d * 0.0128 * (\dot{q_d} - \dot{q}) + \tau_f
 25.6与0.0128为与电机通信协议中的缩放倍数。
 
 CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
+
