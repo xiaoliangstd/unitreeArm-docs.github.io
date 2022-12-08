@@ -95,8 +95,10 @@ Line9: #set(COMMUNICATION ROS)
 
 ② armCtrlInJointCtrl()
 
-该方法相当相当于在example_JointCtrl的基础上再进一步封装，原本用户需要输入关节命令$q \& \dot{q}$，现在只需输入希望电机运行的方向即可。
+该方法相当相当于在example_JointCtrl的基础上再进一步封装，原本用户需要输入关节命令
+$$q \And \dot{q}$$，现在只需输入希望电机运行的方向即可。
 函数内直接会进行如下命令计算：  
+
 $$\dot{q} = directions*\omega$$  
 $$q_{k} = q_{k-1} + \dot{q}*\delta t$$
 
@@ -106,11 +108,13 @@ $$q_{k} = q_{k-1} + \dot{q}*\delta t$$
 
 与上例类似，在笛卡尔空间下，原本需要用户控制空间速度旋量 $$V =[\omega \quad v]'$$ ，即unitreeArm.twist从而控制机械臂运转，该方法在此基础上进行了封装，用户直接控制希望机械臂末端运行的方向即可。
 函数内直接会进行如下命令计算：
-其中T 为由R，p组成的齐次变换矩阵，[ω]为ω的反对称矩阵  
+其中T是由R，p组成的齐次变换矩阵，[ω]为ω的反对称矩阵  
+
 $$T_{\Delta} = directions * speed$$  
 $$T_k = T_{\Delta} + T_{k-1}$$  
 $$[\omega] = \log{(R_{k-1}^T R_k)}$$  
 $$v=p_\Delta$$  
+
 采用该方法时相当于在键盘控制时按下3键后通过键盘直接控制机械臂。
 
 #### 2.2.2 example_JointCtrl
