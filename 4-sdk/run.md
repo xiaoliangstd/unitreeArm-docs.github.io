@@ -58,10 +58,10 @@ make
 
 执行build文件夹内的可执行文件
 
-本次我们执行./bigDemo, 会执行一个示例动作
+本次我们执行./highcmd_basic, 会执行一个示例动作
 
 ```shell
-./bigDemo
+./highcmd_basic
 ```
 
 + 键盘操作 *具体的键位在状态机小节会有介绍*
@@ -93,6 +93,6 @@ set(COMMUNICATION UDP)               #UDP
 
 **③** 执行`./z1_ctrl`
 
-**④** 执行`./bigDemo`
+**④** 执行`./highcmd_basic`
 
 此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](../2-basic/sdk.md)小节介绍
