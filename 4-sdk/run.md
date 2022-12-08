@@ -92,6 +92,7 @@ set(COMMUNICATION UDP)               #UDP
 ```
 
 **③** 执行`./z1_ctrl`
+
 **④** 执行`./bigDemo`
 
 此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](../2-basic/sdk.md)小节介绍

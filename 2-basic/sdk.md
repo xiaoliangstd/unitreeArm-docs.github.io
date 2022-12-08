@@ -43,12 +43,19 @@ Line9: #set(COMMUNICATION ROS)
 该文件只在z1_ctrl启动时读取一次：
 
 1. IP & Port
+
    **IP**：此为通过unitreeArmTools更改的机械臂IP，当机械臂IP更改后，需要更改此地址以便z1_ctrl和机械臂正常通信
+
    **Port**：机械臂的端口为8880，此项更改的是PC执行z1_ctrl时绑定的本机端口，默认8881，用于同一台PC控制多个机械臂
+
 2. collision
+
     包含碰撞检测相关的设置
+
     **open**: 设置为Y或N选择是否打开碰撞检测
+
     **limitT**: 为进行检测时计算扭矩与反馈扭矩的差值检测阈值，单位为NM
+
     **load**: 挂载在机械臂末端的负载重量，单位kg，该值与open设置无关，会一直参与末端负载的动力学计算。
 
 ### 1.5 config/saveArmStates.csv
@@ -88,7 +95,7 @@ Line9: #set(COMMUNICATION ROS)
 
 ② armCtrlInJointCtrl()
 
-该方法相当相当于在example_JointCtrl的基础上再进一步封装，原本用户需要输入关节命令q & qd，现在只需输入希望电机运行的方向即可。
+该方法相当相当于在example_JointCtrl的基础上再进一步封装，原本用户需要输入关节命令$q \& \dot{q}$，现在只需输入希望电机运行的方向即可。
 函数内直接会进行如下命令计算：
 
 $$\dot{q} = directions * \omega  \qquad, \qquad q_{k} = q_{k-1} + \dot{q}*\delta t$$
@@ -97,21 +104,22 @@ $$\dot{q} = directions * \omega  \qquad, \qquad q_{k} = q_{k-1} + \dot{q}*\delta
 
 ③ armCtrlInCartsian()
 
-与上例类似，在笛卡尔空间下，原本需要用户控制空间速度旋量$V =[\omega \quad v]'$，即unitreeArm.twist从而控制机械臂运转，该方法在此基础上进行了封装，用户直接控制希望机械臂末端运行的方向即可。
+与上例类似，在笛卡尔空间下，原本需要用户控制空间速度旋量$$V =[\omega \quad v]'$$，即unitreeArm.twist从而控制机械臂运转，该方法在此基础上进行了封装，用户直接控制希望机械臂末端运行的方向即可。
 函数内直接会进行如下命令计算：
 其中T 为由R，p组成的齐次变换矩阵，[ω]为ω的反对称矩阵
-$$
-T_{\Delta} = directions * speed \\
-T_k = T_{\Delta} + T_{k-1} \\
-/[\omega] = \log{(R_{k-1}^T R_k)}\\
-v=p_\Delta
-$$
+$$T_{\Delta} = directions * speed$$
+
+$$T_k = T_{\Delta} + T_{k-1}$$
+
+$$[\omega] = \log{(R_{k-1}^T R_k)}$$
+
+$$v=p_\Delta$$
 采用该方法时相当于在键盘控制时按下3键后通过键盘直接控制机械臂。
 
 #### 2.2.2 example_JointCtrl
 
 如果用户希望自行**规划轨迹**运行机械臂，可以查看该示例。
-该例编写了一个关节轨迹类JointTraj，其中setJointTraj和setGripper函数根据给定的起末关节坐标及速度设定轨迹参数（由五次多项式定义），getJointCmd会根据执行时间求得当前规划好的关节坐标$q$及关节速度$\dot{q}$，在不同的时间参数$s\in[0, 1]$下
+该例编写了一个关节轨迹类JointTraj，其中setJointTraj和setGripper函数根据给定的起末关节坐标及速度设定轨迹参数（由五次多项式定义），getJointCmd会根据执行时间求得当前规划好的关节坐标$$q$$及关节速度$$\dot{q}$$，在不同的时间参数$$s\in[0, 1]$$下
 
 #### 2.2.3 example_lowcmd_send
 
