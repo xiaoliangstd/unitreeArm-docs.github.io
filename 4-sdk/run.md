@@ -8,8 +8,8 @@ sort: 2
 
 **①** 打开仿真
 
-如果用户对ros文件不太熟悉，请在home下创建unitree_ros/src文件并将unitree_ros文件移动到 /home/用户名/unitree_ros/src 目录下，
-即/home/用户名/unitree_ros/src/unitree_ros
+如果用户对ros文件不太熟悉，请在home下创建`unitree_ros/src`文件并将`unitree_ros`文件移动到`/home/username/unitree_ros/src/unitree_ros`
+同时下载[unitree_legged_msgs](https://github.com/unitreerobotics/unitree_ros_to_real)放入`src/unitree_ros/`目录下
 
 ```shell
 cd ~/unitree_ros                                            #打开该文件夹
@@ -43,7 +43,7 @@ make
 输入`./z1_Ctrl`执行build文件夹内的可执行文件（默认通过sdk进行控制，如需直接使用键盘控制，可以执行`./z1_ctrl k`）
 
 
-当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
+当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, connect wit z1_sdk wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
 
 **各种信息都会在这个窗口打印，用户使用使请多观察此窗口内容。**
 
@@ -58,18 +58,10 @@ make
 
 执行build文件夹内的可执行文件
 
-其中共生成 example_lowcmd_send, bigdemo两个可执行文件。
-
 本次我们执行./bigDemo, 会执行一个示例动作
 
 ```shell
 ./bigDemo
-```
-
-也可直接在controller的build下执行键盘控制，
-
-```shell
-./z1_ctrl k
 ```
 
 + 键盘操作 *具体的键位在状态机小节会有介绍*
@@ -102,4 +94,4 @@ set(COMMUNICATION UDP)               #UDP
 **③** 执行`./z1_ctrl`
 **④** 执行`./bigDemo`
 
-此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](../1-basic/sdk.md)小节介绍
+此处和仿真的操作一致，此时已经了解如何控制机械臂，更多操作方法将在[基础概念](../2-basic/sdk.md)小节介绍

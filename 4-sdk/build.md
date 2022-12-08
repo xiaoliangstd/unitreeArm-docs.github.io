@@ -8,7 +8,7 @@ sort: 1
 
 机械臂SDK与机械臂控制器均基于Ubuntu18.04构建，同时在仿真控制中依赖的ROS系统为Melodic版本。故为了能更好地使用，请用户尽量之保持一致。如果仅使用实机操控，也无需安装ROS
 
-除此之外，机械臂SDK与机械臂控制器还依赖了许多第三方工具，用户在使用前需要将这些第三方工具安装好。
+除此之外，机械臂SDK与机械臂控制器还依赖了一些第三方工具，用户在使用前需要将这些第三方工具安装好。
 
 为了方便用户使用，我们也在z1_sdk/thirdparty/目录下提供了Eigen包，解压后可以直接根据以下步骤进行安装。
 
@@ -34,23 +34,6 @@ cmake --version             # check cmake version
 sudo apt install cmake      # install cmake
 ```
 
-<!-- + GCC(GLIBCXX 3.4.22版本或更高)
-
-可以通过以下命令行查看当前GLIBCXX版本信息
-
-```shell
-strings /usr/lib/x86_64-linux-gnu/libstdc++.so.6 | grep GLIBCXX
-```
-
-upgrade
-
-```shell
-sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-sudo apt-get update
-sudo apt-get install gcc-4.9
-sudo apt-get upgrade libstdc++6
-``` -->
-
 + Eigen (3.3.9版本)
 
 如果已安装旧版本Eigen，可以先卸载，如果没有可以直接进行下一步安装。
@@ -74,16 +57,6 @@ sudo make install
 sudo ln -s /usr/local/include/eigen3  /usr/include/eigen3
 sudo ln -s /usr/local/include/eigen3/Eigen  /usr/local/include/Eigen
 ```
-
-<!-- + LCM (1.4.0版本)
-
-```shell
-cd lcm-1.4.0
-mkdir build && cd build
-cmake ..
-make
-sudo make install
-``` -->
 
 ## ROS(melodic)安装
 
@@ -154,10 +127,14 @@ netmask 255.255.255.0
 
 此时可以通过ping 192.168.123.110指令检测与机械臂连接是否正常。
 
-### 机械臂控制程序IP更改
+也可直接在系统网络设置的如下界面更改：
 
-如果用户更改了机械臂控制板IP，比如将原本的192.168.123.110改为192.168.123.111，
-此时需要使控制程序z1_ctrl的IP与其保持一致。
-
-打开z1_controller/config.xml文件，更改其中IP即可。
-注：该文件只是为了使程序可以与机械臂成功通信，并不是更改机械臂IP。
+<center>
+<img src="../img/IPchange.jpg" style="zoom:70%" alt=" 图片不见了。。。 "/>
+<br>
+<div style="color:orange; border-bottom: 0.1px solid #d9d9d9;
+display: inline-block;
+color: #999;
+padding: 1px;">固定本机IP地址</div>
+</center>
+<br>

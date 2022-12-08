@@ -33,7 +33,7 @@ padding: 1px;"></div>
 </table>
 </center>
 
-实际计算采用弧度制，还有其他如坐标轴、惯性矩阵等信息都在~/z1_ws/src/z1_ros/z1_description/xacro的文件里有描述。
+实际计算采用弧度制，还有其他如坐标轴、惯性矩阵等信息都在unitree_ros/robots/z1_description/xacro的文件里有描述。
 
 ## 安装机械臂
 
@@ -120,7 +120,7 @@ padding: 1px;">z1机械臂关节序号及关节转动正方向定义</div>
 |J6|[1, 0, 0]|[-0.0128, 0, 0.1685]|
 
 其中手爪装载平面（即J6末端平面）的绝对初始位置为[0,049, 0, 0.1605]
-Unitree_gripper中心相对于装载平面的位置为[0.0382, 0, 0]，即config.xml里的endPosLocal参数
+Unitree_gripperd电机中心相对于装载平面的位置为[0.0382, 0, 0]，即config.xml里的endPosLocal参数
 
 ## 末端关节法兰
 
