@@ -120,11 +120,15 @@ $$v=p_\Delta$$
 #### 2.2.2 example_JointCtrl
 
 如果用户希望自行**规划轨迹**运行机械臂，可以查看该示例。
+
 该例编写了一个关节轨迹类JointTraj，其中setJointTraj和setGripper函数根据给定的起末关节坐标及速度设定轨迹参数（由五次多项式定义），getJointCmd会根据执行时间求得当前规划好的关节坐标 $$q$$ 及关节速度 $$\dot{q}$$ ，在不同的时间参数 $$s\in[0, 1]$$ 下
 
 #### 2.2.3 example_lowcmd_send
 
 如果用户希望直接从**底层控制**电机实现各种功能，可以查看该示例。
+
 该文件展示了如何对电机进行直接发送pd参数。用户可以通过编写自己的机械臂程序对电机直接进行控制，实现自主开发。
+
 CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
+
 **注意**：发给电机的实际kp = kp \* 25.6; 实际 kd = kd \* 0.0128；
