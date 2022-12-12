@@ -12,13 +12,11 @@ z1机械臂共提供3个文件夹供用户使用，分别是z1_controller，z1_s
 
 ## 1. z1_controller
 
-z1_controller用户直接控制机械臂运行，每次用户使用机械臂时都需要打开build/z1_ctrl执行程序。
 除以下提到的文件外，用户无需查看该文件夹下的其他文件。
-用户只需关注**CMakeLists.txt**文件（根据需求更改ROS、UDP选择实机控制或仿真）和**config/config.xml**（根据需求更改配置信息
 
 ### 1.1 build/z1_ctrl
 
-用户创建build文件后编译程序，最终可执行程序名为z1_ctrl
+用户创建build文件后编译程序，最终可执行程序名为z1_ctrl，每次用户使用机械臂时都需要执行该程序。
 
 + 调用`./z1_ctrl -v`可以常看当前机械臂版本信息，如果此时可以正常连接机械臂，也会显示下位机版本信息。
 + 调用`./z1_ctrl k`可以使用键盘控制机械臂运动
@@ -71,7 +69,7 @@ Line9: #set(COMMUNICATION ROS)
 
 #### 2.1.1 unitree_arm_sdk/control
 
-该文件夹下共两个文件夹，ctrlComponents.h 和 unitreeArm.h，其中ctrlComponents.h主要是将所有的控制参数放在了一个类中便于调用，unitreeArm封装了用于控制机械臂的所有接口，用户使用时只要查看该类中信息。
+该文件夹下共两个文件，`ctrlComponents.h` 和 `unitreeArm.h`，其中ctrlComponents.h主要是将所有的控制参数放在了一个类中便于调用，unitreeArm封装了用于控制机械臂的所有接口，用户使用时只要查看该类中信息。
 
 #### 2.1.2 unitree_arm_sdk/model
 
@@ -134,4 +132,3 @@ $$ \tau = k_p * 25.6 * (q_d - q) + k_d * 0.0128 * (\dot{q_d} - \dot{q}) + \tau_f
 25.6与0.0128为与电机通信协议中的缩放倍数。
 
 CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
-

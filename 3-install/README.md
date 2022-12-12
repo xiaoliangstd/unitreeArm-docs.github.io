@@ -33,7 +33,7 @@ padding: 1px;"></div>
 </table>
 </center>
 
-实际计算采用弧度制，还有其他如坐标轴、惯性矩阵等信息都在unitree_ros/robots/z1_description/xacro的文件里有描述。
+实际计算采用弧度制，还有其他如坐标轴、惯性矩阵等信息都在`unitree_ros/robots/z1_description/xacro`的文件里有描述。
 
 ## 安装机械臂
 
