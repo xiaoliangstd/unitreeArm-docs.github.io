@@ -28,7 +28,7 @@ Z1机械臂SDK共包含三个文件(附下载地址)，且相互独立。
 
 该文件夹包含了机械臂的控制实现部分。
 
-+ [z1_sdk](https://github.com/unitreerobotics/unitree_ros)
++ [z1_sdk](https://github.com/unitreerobotics/z1_sdk)
 
 该文件夹包含控制程序的接口。
 
