@@ -108,8 +108,7 @@ $$q_{k} = q_{k-1} + \dot{q}*\delta t$$
 函数内直接会进行如下命令计算：
 其中T是由R，p组成的齐次变换矩阵，[ω]为ω的反对称矩阵  
 
-$$T_{\Delta} = directions * speed$$  
-$$T_k = T_{\Delta} + T_{k-1}$$  
+$$ posture_k = posture_{k-1}+posture_{\Delta}$$  
 $$[\omega] = \log{(R_{k-1}^T R_k)}$$  
 $$v=p_\Delta$$  
 
