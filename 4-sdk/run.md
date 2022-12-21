@@ -8,17 +8,17 @@ sort: 2
 
 **①** 打开仿真
 
-如果用户对ros文件不太熟悉，请在home下创建`unitree_ros/src`文件并将`unitree_ros`文件移动到`/home/username/unitree_ros/src/unitree_ros`
-同时下载[unitree_legged_msgs](https://github.com/unitreerobotics/unitree_ros_to_real)放入`src/unitree_ros/`目录下
+如果用户对ros文件不太熟悉，请在home下创建`unitree_ws/src`文件并将`unitree_ros`文件移动到`/home/username/unitree_ws/src/unitree_ros`
+同时下载[unitree_legged_msgs](https://github.com/unitreerobotics/unitree_ros_to_real)放入`unitree_ws/src/`目录下
 
 ```shell
-cd ~/unitree_ros                                            #打开该文件夹
+cd ~/unitree_ws                                             #打开该文件夹
 catkin_make                                                 #初始化ROS工作空间
-echo “source ~/unitree_ros/src/unitree_ros/devel/setup.bash”>>~/.bashrc     #将ros路径添加到环境变量，可由pwd命令获取当前路径替换该路径
+echo “source ~/unitree_ws/src/unitree_ros/devel/setup.bash”>>~/.bashrc     #将ros路径添加到环境变量，可由pwd命令获取当前路径替换该路径
 source ~/.bashrc                                            #更新环境变量
 ```
 
-在终端执行`roslaunch z1_gazebo z1.launch`，如果成功配置此时可以显示出gazebo的仿真界面。
+在终端执行`roslaunch unitree_gazebo z1.launch`，如果成功配置此时可以显示出gazebo的仿真界面。
 
 ```text
 Tips：可以在输入 roslaunch z后按tap查看是否终端会自动补全，如果成功出现roslaunch z1_说明路径设置成功
