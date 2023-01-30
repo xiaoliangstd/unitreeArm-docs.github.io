@@ -42,7 +42,6 @@ make
 
 输入`./z1_Ctrl`执行build文件夹内的可执行文件（默认通过sdk进行控制，如需直接使用键盘控制，可以执行`./z1_ctrl k`）
 
-
 当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, connect wit z1_sdk wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
 
 **各种信息都会在这个窗口打印，用户使用使请多观察此窗口内容。**
