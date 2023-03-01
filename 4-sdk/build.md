@@ -62,7 +62,7 @@ sudo ln -s /usr/local/include/eigen3/Eigen  /usr/local/include/Eigen
 
 参考ROS官方[melodic安装教程](http://wiki.ros.org/melodic/Installation/Ubuntu)
 
-其中中国用户在使用在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试通过国内小鱼ROS开发的rosdepc命令执行。
+其中中国用户在使用rosdep时可能会因为无法连接外网而发生错误，可以尝试通过国内小鱼ROS开发的rosdepc命令执行。
 
 添加ROS源
 
