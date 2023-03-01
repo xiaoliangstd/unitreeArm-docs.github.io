@@ -118,7 +118,10 @@ $$v=p_\Delta$$
 
 如果用户希望自行开发，通过**规划轨迹**运行机械臂，可以查看该示例。
 
-该例编写了一个关节轨迹类JointTraj，其中setJointTraj和setGripper函数根据给定的起末关节坐标及速度设定轨迹参数（由五次多项式定义），getJointCmd会根据执行时间求得当前规划好的关节坐标 $$q$$ 及关节速度 $$\dot{q}$$ ，在不同的时间参数 $$s\in[0, 1]$$ 下
+当sendRecvThread->start()执行后，该线程会以500HZ的频率执行arm.sendRecv()函数。
+
+关节下控制时，该函数会发送unitreeArm下的q, qd, gripperQ, gripperW给z1_controller,
+笛卡尔下控制时，该函数会发送unitreeArm下的twist给z1_controller，用户只需不断更改这些参数即可控制机械臂。也可自己编写线程进行调用unitreeArm.sendRecv()进行通信。
 
 #### 2.2.3 lowcmd_development
 
@@ -131,3 +134,17 @@ $$ \tau = k_p * 25.6 * (q_d - q) + k_d * 0.0128 * (\dot{q_d} - \dot{q}) + \tau_f
 25.6与0.0128为与电机通信协议中的缩放倍数。
 
 CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
+
+### 2.3 examples_py
+
+这里面包含机械臂sdk的python版本接口。
+
+接口设计在arm_python_interface.cpp文件中，其中已经包含的函数及变量可直接在python中使用，用户也可自行更改，详情查看[pybind11 documentation](https://pybind11.readthedocs.io/en/stable/)
+
+**调用方式**:
+
+编译完成后z1_sdk/lib中会生成一个名为unitree_arm_interface的库
+
+在第一个终端运行`./z1_ctrl`
+
+在z1_sdk/examples_py目录下打开第二个终端执行`python3 example_highcmd.py`

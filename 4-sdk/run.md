@@ -14,7 +14,7 @@ sort: 2
 ```shell
 cd ~/unitree_ws                                             #打开该文件夹
 catkin_make                                                 #初始化ROS工作空间
-echo “source ~/unitree_ws/src/unitree_ros/devel/setup.bash”>>~/.bashrc     #将ros路径添加到环境变量，可由pwd命令获取当前路径替换该路径
+echo “source ~/unitree_ws/devel/setup.bash”>>~/.bashrc     #将ros路径添加到环境变量，可由pwd命令获取当前路径替换该路径
 source ~/.bashrc                                            #更新环境变量
 ```
 
@@ -41,7 +41,6 @@ make
 ```
 
 输入`./z1_Ctrl`执行build文件夹内的可执行文件（默认通过sdk进行控制，如需直接使用键盘控制，可以执行`./z1_ctrl k`）
-
 
 当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, connect wit z1_sdk wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
 
