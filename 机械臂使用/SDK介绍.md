@@ -2,13 +2,13 @@
 sort: 1
 ---
 
-# 机械臂SDK介绍
+# SDK介绍
 
 z1机械臂共提供3个文件夹供用户使用，分别是z1_controller，z1_sdk以及unitree_ros。
 
 + z1_controller存储着直接控制机械臂的源码。
 + z1_sdk包含了用于控制机械臂的一些接口，用户在创建自己的程序使用z1机械臂时需要包含该文件夹。
-+ unitree_ros用于机械臂仿真，其中包含了宇树四足产品Go1, A1, Aliengo, Laikago和机械臂产品Z1的仿真信息。
++ unitree_ros用于机械臂仿真，其中包含了宇树四足产品Go1, A1, Aliengo, Laikago和机械臂产品Z1的仿真文件。
 
 ## 1. z1_controller
 
@@ -27,8 +27,8 @@ z1机械臂共提供3个文件夹供用户使用，分别是z1_controller，z1_s
 用户在使用时需要根据自身使用方式自行选择采用实际控制或仿真，只需注释掉不需要的一行即可。更改完毕后需重新编译一下程序。
 
 ```cmake
-Line8: set(COMMUNICATION UDP)
-Line9: #set(COMMUNICATION ROS)
+set(COMMUNICATION UDP)
+# set(COMMUNICATION ROS)
 ```
 
 ### 1.3 unitreeArmTools
@@ -82,7 +82,7 @@ Line9: #set(COMMUNICATION ROS)
 
 #### 2.2.1 highcmd_basic
 
-如果用户只是想**简单了解**如何使用机械臂，可以查看该示例。
+如果用户希望**简单了解**如何使用机械臂，可以查看该示例。
 
 该示例下共含三种使用机械臂的方式。
 
@@ -93,7 +93,7 @@ Line9: #set(COMMUNICATION ROS)
 
 ② armCtrlInJointCtrl()
 
-该方法相当相当于在`highcmd_development`的基础上再进一步封装，原本用户需要输入关节命令
+该方法相当于在`highcmd_development`的基础上再进一步封装，原本用户需要输入关节命令
 $$q \And \dot{q}$$，现在只需输入希望电机运行的方向即可。
 函数内直接会进行如下命令计算：  
 
