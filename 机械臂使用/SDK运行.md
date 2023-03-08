@@ -24,11 +24,11 @@ cmake ..
 make
 ```
 
-**④** 执行`./z1_ctrl`，（如第一次使用，需先在键盘控制下进行标定操作）
+**④** 执行`./z1_ctrl`
 
 当执行该条命令后，终端会不断地打印`[WARNING] UDPPort::recv, unblock version, connect wit z1_sdk wait time out`语句，这是正常的，因为我们还没有启动机械臂SDK与机械臂控制器通信。
 
-**⑥** 打开第二个中断，打开z1_sdk文件夹，创建build文件并编译
+**⑥** 打开第二个终端，打开z1_sdk文件夹，创建build文件并编译
 
 **⑥** 执行`./highcmd_basic`
 
