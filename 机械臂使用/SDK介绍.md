@@ -135,6 +135,10 @@ $$ \tau = k_p * 25.6 * (q_d - q) + k_d * 0.0128 * (\dot{q_d} - \dot{q}) + \tau_f
 
 CtrlComponents下的sendRecvThread是调用unitreeArm的函数进行指令操作，如运行至forward视为一条指令，而运行lowcmd时建议采用自己定义的线程，执行run函数，run函数开始通过计算确定当前需要发给电机的命令，最后调用sendRecv发送udp报文。
 
+#### 2.2.4 lowcmd_multirobots
+
+该程序提供了控制多个机械臂的示例。详见SDK运行
+
 ### 2.3 examples_py
 
 这里面包含机械臂sdk的python版本接口。

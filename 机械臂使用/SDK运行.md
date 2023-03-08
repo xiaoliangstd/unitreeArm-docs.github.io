@@ -92,3 +92,26 @@ make
 ```
 
 此时我们已经完成仿真操作，整个流程为&emsp;**运行ROS-->运行z1_ctrl-->运行SDK实例**
+
+## 多机控制
+
+对于需要控制多个Z1机械臂的用户，SDK提供了lowcmd_multirobots示例代码。
+
+**①** 打开z1_controller，设置编译条件为UDP
+
+**②** 复制z1_controller文件夹，如命名为z1_controller_ros, 设置编译条件为ROS
+
+**③** 打开z1_controller_ros/main.cpp
+将L51的与SDK通信的端口设置为如下示例
+
+```cpp
+ctrlComp->cmdPanel = new ARMSDK(events, emptyAction, "127.0.0.1", 8074, 8073, 0.002);
+```
+
+**④** 根据之前所述，进行如下操作
+
+1. 连接实体机械臂并在第一个终端执行z1_controller下的z1_ctrl
+2. 在第二个终端打开ROS仿真并在第三个终端执行在z1_controller_ros的z1_ctrl
+3. 在第四个终端运行z1_sdk中的lowcmd_multirobots
+
+此时可以看到两个机械臂的第一个关节都转动了一定角度。
