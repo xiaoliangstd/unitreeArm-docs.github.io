@@ -97,22 +97,20 @@ make
 
 对于需要控制多个Z1机械臂的用户，SDK提供了lowcmd_multirobots示例代码。
 
-**①** 打开z1_controller，设置编译条件为UDP
+**①** 打开z1_controller，设置编译条件为UDP， 复制z1_controller文件夹，如命名为z1_controller_111
 
-**②** 复制z1_controller文件夹，如命名为z1_controller_111, 设置编译条件UDP
-
-**③** 打开z1_controller_2/main.cpp
+**②** 打开z1_controller_111/main.cpp
 将L51的与SDK通信的端口设置为如下示例
 
 ```cpp
 ctrlComp->cmdPanel = new ARMSDK(events, emptyAction, "127.0.0.1", 8074, 8073, 0.002);
 ```
 
-**④** 打开使用unitreeArmTools.py更改第二台机械臂的IP为111
+**③** 打开z1_controller_111/config.xml，更改IP为192.168.123.111, 更改端口为8882
 
-**⑤** 打开z1_controller_111/config.xml，更改IP为192.168.123.111, 更改端口为8882
+**④** 打开使用unitreeArmTools.py更改第二台机械臂的IP为192.168.123.111
 
-**④** 根据之前所述，进行如下操作
+**⑤** 根据之前所述，进行如下操作
 
 1. 连接实体机械臂110并在第一个终端执行z1_controller下的z1_ctrl
 2. 连接实体机械臂111并在第二个终端执行在z1_controller_111的z1_ctrl
