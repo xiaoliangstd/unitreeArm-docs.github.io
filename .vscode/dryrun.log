@@ -1,4 +1,5 @@
-make.exe --dry-run --always-make --keep-going --print-directory
-'make.exe' �����ڲ����ⲿ���Ҳ���ǿ����еĳ���
-���������ļ���
-
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/agnel/z1/doc/unitreeArm-docs.github.io'
+gem install jekyll bundler && bundle install
+make: Leaving directory '/home/agnel/z1/doc/unitreeArm-docs.github.io'
+ 
