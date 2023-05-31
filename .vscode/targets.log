@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Apr 25 21:02:37 2023
+# Make data base, printed on Wed May 31 11:18:44 2023
 
 # Variables
 
@@ -45,9 +45,9 @@ SHELL = /bin/sh
 # environment
 VTE_VERSION = 6003
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","osLocale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:48862
+JOURNAL_STREAM = 8:46002
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -75,7 +75,7 @@ _ = /usr/bin/code
 # environment
 ROS_PACKAGE_PATH = /opt/ros/noetic/share
 # environment
-MANAGERPID = 1718
+MANAGERPID = 1699
 # environment
 ROS_PYTHON_VERSION = 3
 # environment
@@ -83,7 +83,7 @@ LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 LC_NAME = zh_CN.UTF-8
 # environment
-VSCODE_CWD = /home/agnel/z1/doc/unitreeArm-docs.github.io
+VSCODE_CWD = /home/agnel/z1/doc
 # environment
 CLUTTER_IM_MODULE = fcitx
 # default
@@ -95,7 +95,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/ubuntuPro:@/tmp/.ICE-unix/1938,unix/ubuntuPro:/tmp/.ICE-unix/1938
+SESSION_MANAGER = local/ubuntuPro:@/tmp/.ICE-unix/1920,unix/ubuntuPro:/tmp/.ICE-unix/1920
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -105,7 +105,7 @@ XDG_MENU_PREFIX = gnome-
 # environment
 all_proxy = socks://127.0.0.1:7890/
 # environment
-INVOCATION_ID = 8b535fb5548b4900a57f10b112d4c07f
+INVOCATION_ID = 066625f6b0974ab09c500b559578ee96
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -129,7 +129,7 @@ PWD = /home/agnel/z1/doc/unitreeArm-docs.github.io
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1892
+SSH_AGENT_PID = 1874
 # environment
 PKG_CONFIG_PATH = /usr/local/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig
 # environment
@@ -147,7 +147,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/agnel/.config/Code/CachedData/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884
+VSCODE_CODE_CACHE_PATH = /home/agnel/.config/Code/CachedData/b3e4e68a0bc097f0ae7907b217c1119af9e03435
 # environment
 LOGNAME = agnel
 # environment
@@ -171,11 +171,13 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-PATH = /usr/local/bin:/opt/ros/noetic/bin:/home/agnel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/agnel/Downloads/gcc-linaro-6.3.1-2017.02-x86_64_arm-linux-gnueabihf/bin:/opt/cyclonedds/bin
+PATH = /usr/local/bin:/opt/ros/noetic/bin:/home/agnel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/cyclonedds/bin
 # environment
 SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+VSCODE_CRASH_REPORTER_SANDBOXED_HINT = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -193,13 +195,13 @@ LC_TELEPHONE = zh_CN.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/agnel/z1/doc
+OLDPWD = /home/agnel/z1
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-e11544f8-1.76-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-e11544f8-1.78-main.sock
 # environment
 PYTHONPATH = /usr/local/lib/python2.7/site-packages:/opt/ros/noetic/lib/python3/dist-packages
 # makefile
@@ -219,15 +221,11 @@ GDK_BACKEND = x11
 # environment
 LC_PAPER = zh_CN.UTF-8
 # environment
-NO_AT_BRIDGE = 1
-# environment
 HTTP_PROXY = http://127.0.0.1:7890/
 # environment
 QT_ACCESSIBILITY = 1
 # environment
 DISPLAY = :0
-# environment
-CROSS_COMPILE = arm-linux-gnueabihf-
 # default
 MAKEFILES := 
 # environment
@@ -247,11 +245,11 @@ LC_ALL = C
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/9f62edf0_b69d_4c87_8128_ca3b9f9c7346
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b8790be5_67e6_4f66_9ceb_19082c8ffa0e
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.3709
+GNOME_TERMINAL_SERVICE = :1.270
 # default
 SUFFIXES := 
 # environment
@@ -275,9 +273,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 30047
+VSCODE_PID = 6356
 # variable set hash-table stats:
-# Load=132/1024=13%, Rehash=0, Collisions=25/157=16%
+# Load=131/1024=13%, Rehash=0, Collisions=25/156=16%
 
 # Pattern-specific Variable Values
 
@@ -299,13 +297,13 @@ VSCODE_PID = 30047
 all:
 #  Command line target.
 #  Implicit rule search has been done.
- 
 #  File does not exist.
 #  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2023-03-10 12:23:35.649725151
 #  File has been updated.
 #  Successfully updated.
@@ -365,6 +363,6 @@ clean:
 # strcache performance: lookups = 36 / hit rate = 30%
 # hash-table stats:
 # Load=25/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Tue Apr 25 21:02:37 2023
+# Finished Make data base on Wed May 31 11:18:44 2023
 
  
