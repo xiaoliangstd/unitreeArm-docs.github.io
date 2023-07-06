@@ -11,7 +11,7 @@ z1机械臂共提供4个文件夹供用户使用，分别是z1_controller，z1_s
 + [unitree_ros](https://github.com/unitreerobotics/unitree_ros) 用于机械臂仿真，其中包含了宇树四足产品Go1, A1, Aliengo, Laikago和机械臂产品Z1的仿真文件。
 + [z1_ros](https://github.com/unitreerobotics/z1_ros/tree/noetic)（包含unitree_ros）, 提供noetic moveit1支持
 
-**注意**：z1_ros中也包含`z1_controller`和`z1_sdk`， 且提供的接口不上述z1_sdk不同。
+**注意**：z1_ros中也包含`z1_controller`和`z1_sdk`， 提供的接口可以直接发送UDP结构体进行通信，与上述z1_sdk不兼容。
 
 ## 1. z1_controller
 
