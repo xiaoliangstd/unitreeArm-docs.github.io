@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  6 16:34:49 2023
+# Make data base, printed on Thu Jul  6 16:40:57 2023
 
 # Variables
 
@@ -195,7 +193,7 @@ LC_TELEPHONE = zh_CN.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/agnel/z1
+OLDPWD = /home/agnel/z1/sdk
 # default
 .VARIABLES := 
 # automatic
@@ -247,7 +245,7 @@ LC_ALL = C
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/e420c835_3149_424e_9f8c_94b6a35f8933
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/874d48c4_5afb_48a4_bfb0_2f1c6eb81428
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -289,12 +287,14 @@ VSCODE_PID = 198312
 
 # 15 files, no impossibilities in 1 directories.
 
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
- 
 
 # Not a target:
 all:
@@ -365,6 +365,6 @@ clean:
 # strcache performance: lookups = 36 / hit rate = 30%
 # hash-table stats:
 # Load=25/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Thu Jul  6 16:34:49 2023
+# Finished Make data base on Thu Jul  6 16:40:57 2023
 
  
