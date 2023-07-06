@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  6 16:11:16 2023
+# Make data base, printed on Thu Jul  6 16:34:49 2023
 
 # Variables
 
@@ -195,7 +195,7 @@ LC_TELEPHONE = zh_CN.UTF-8
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /home/agnel
+OLDPWD = /home/agnel/z1
 # default
 .VARIABLES := 
 # automatic
@@ -214,6 +214,8 @@ MFLAGS = -pqrR
 ROS_VERSION = 1
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
 # environment
 GDK_BACKEND = x11
 # environment
@@ -245,7 +247,7 @@ LC_ALL = C
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/02b70688_8c3f_4c39_93dc_37f7846acd15
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/e420c835_3149_424e_9f8c_94b6a35f8933
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -275,7 +277,7 @@ TERM = xterm-256color
 # environment
 VSCODE_PID = 198312
 # variable set hash-table stats:
-# Load=131/1024=13%, Rehash=0, Collisions=25/156=16%
+# Load=132/1024=13%, Rehash=0, Collisions=25/157=16%
 
 # Pattern-specific Variable Values
 
@@ -292,6 +294,7 @@ VSCODE_PID = 198312
 # No implicit rules.
 
 # Files
+ 
 
 # Not a target:
 all:
@@ -303,7 +306,6 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
 #  Last modified 2023-07-06 16:10:55.815439317
 #  File has been updated.
 #  Successfully updated.
@@ -363,6 +365,6 @@ clean:
 # strcache performance: lookups = 36 / hit rate = 30%
 # hash-table stats:
 # Load=25/8192=0%, Rehash=0, Collisions=1/36=3%
-# Finished Make data base on Thu Jul  6 16:11:16 2023
+# Finished Make data base on Thu Jul  6 16:34:49 2023
 
  
