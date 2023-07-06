@@ -4,11 +4,14 @@ sort: 1
 
 # SDK介绍
 
-z1机械臂共提供3个文件夹供用户使用，分别是z1_controller，z1_sdk以及unitree_ros。
+z1机械臂共提供4个文件夹供用户使用，分别是z1_controller，z1_sdk以及unitree_ros, z1_ros。
 
-+ z1_controller存储着直接控制机械臂的源码。
-+ z1_sdk包含了用于控制机械臂的一些接口，用户在创建自己的程序使用z1机械臂时需要包含该文件夹。
-+ unitree_ros用于机械臂仿真，其中包含了宇树四足产品Go1, A1, Aliengo, Laikago和机械臂产品Z1的仿真文件。
++ [z1_controller](https://github.com/unitreerobotics/z1_controller) 存储着直接控制机械臂的源码。
++ [z1_sdk](https://github.com/unitreerobotics/z1_sdk) 包含了用于控制机械臂的一些接口，用户在创建自己的程序使用z1机械臂时需要包含该文件夹。
++ [unitree_ros](https://github.com/unitreerobotics/unitree_ros) 用于机械臂仿真，其中包含了宇树四足产品Go1, A1, Aliengo, Laikago和机械臂产品Z1的仿真文件。
++ [z1_ros](https://github.com/unitreerobotics/z1_ros/tree/noetic)（包含unitree_ros）, 提供noetic moveit1支持
+
+**注意**：z1_ros中也包含`z1_controller`和`z1_sdk`， 且提供的接口不上述z1_sdk不同。
 
 ## 1. z1_controller
 
