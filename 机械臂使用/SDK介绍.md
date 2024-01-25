@@ -25,14 +25,9 @@ z1机械臂共提供4个文件夹供用户使用，分别是z1_controller，z1_s
 + 调用`./z1_ctrl k`可以使用键盘控制机械臂运动
 + 直接调用`./z1_ctrl`需使用SDK控制机械臂
 
-### 1.2 CMakeLists.txt
+### 1.2 build/sim_ctrl
 
-用户在使用时需要根据自身使用方式自行选择采用实际控制或仿真，只需注释掉不需要的一行即可。更改完毕后需重新编译一下程序。
-
-```cmake
-set(COMMUNICATION UDP)
-# set(COMMUNICATION ROS)
-```
+如果用户电脑上已安装gazebo则会生成另一执行文件`sim_ctrl`，用于和unitree_ros中的z1仿真通信。功能与z1_ctrl完全一致。
 
 ### 1.3 unitreeArmTools
 
